@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
@@ -15,8 +14,6 @@ import android.widget.SimpleCursorAdapter;
 import com.example.tacademy.miniproject.data.ChatContract;
 import com.example.tacademy.miniproject.manager.DBManager;
 
-import java.util.List;
-
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,13 +21,11 @@ import java.util.List;
 public class ChatUserFragment extends Fragment {
 
 
+    ListView listView;
+    SimpleCursorAdapter mAdapter;
     public ChatUserFragment() {
         // Required empty public constructor
     }
-
-
-    ListView listView;
-    SimpleCursorAdapter mAdapter;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
